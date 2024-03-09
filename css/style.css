@@ -17,3 +17,7 @@ a:link, a:visited{
     color: blue;
     text-decoration: none;
 }
+
+li{
+    margin-bottom: 10px;
+}
