@@ -2,4 +2,128 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #18192b;
+}
+
+header {
+    text-align: center;
+    margin: 30px;
+}
+
+h1 {
+    margin-bottom: 15px;
+    cursor: default;
+}
+
+.fa-solid {
+    margin-right: 10px;
+}
+
+h4 {
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: auto;
+    transition: all .3s;
+}
+
+h4:hover {
+    background-color: #3d3e55;
+    cursor: default;
+    scale: 1.07;
+}
+
+main {
+    background-color: #292a3f;
+    border-radius: 50px;
+    padding-top: 35px;
+}
+
+img {
+    width: 140px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+#boxMovie {
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    grid-column-gap: 50px;
+    grid-row-gap: 2em;
+    justify-content: center;
+
+    padding: 50px 0;
+}
+
+.titleGroupDiv > p {
+    margin-bottom: 7px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.movieInfo {
+    display: flex;
+    align-items: center;
+
+    border-radius: 15px;
+    background-color: #3d3e55;
+    padding-right: 15px;
+    transition: all .3s;
+}
+
+.movieInfo:hover {
+    cursor: default;
+    scale: 1.03;
+}
+
+.groupInfoDiv {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 200px;
+}
+
+.groupInfoDiv p {
+    color: rgb(201, 201, 201);
+}
+
+.fa {
+    color: gold;
+    margin-bottom: 3px;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+
+    width: 45px;
+    align-items: center;
+}
+
+.infoDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    height: 90%;
+}
+
+.infoDiv > p:last-child {
+    color: rgb(201, 201, 201);
+    font-size: 13px;
+    font-style: italic;
+}
+
+footer {
+    margin: 15px;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+    cursor: default;
 }
