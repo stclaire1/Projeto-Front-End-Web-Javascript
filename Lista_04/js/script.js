@@ -11,7 +11,10 @@ window.addEventListener("load", () => {
 
       fetch(`https://api.themoviedb.org/3/movie/popular?language=${language}&page=1`, options)
         .then(response => response.json())
-        .then(movies => displayTitles(movies.results))
+        .then(movies => {
+          const top10Movies = movies.results.slice(0, 10);
+          displayTitles(top10Movies);
+        })
         .catch(err => console.error(err));
 
 })
