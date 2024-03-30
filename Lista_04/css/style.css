@@ -53,12 +53,13 @@ img {
 
 #boxMovie {
     display: grid;
-    grid-template-columns: repeat(2, 600px);
-    grid-column-gap: 50px;
-    grid-row-gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
     justify-content: center;
 
-    padding: 50px 0;
+    max-width: 1500px;
+    margin: auto;
+    padding: 40px 40px;
 }
 
 .titleGroupDiv > p {
@@ -111,7 +112,7 @@ img {
     flex-direction: column;
     justify-content: space-around;
 
-    height: 90%;
+    height: 85%;
 }
 
 .infoDiv > p:last-child {
@@ -126,4 +127,57 @@ footer {
     font-style: italic;
     text-align: center;
     cursor: default;
+}
+
+@media screen and (max-width: 1000px) {
+    #boxMovie {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #boxMovie {
+        padding: 30px 0 10px 0;
+    }
+
+    .infoDiv {
+        width: 100%;
+    }
+
+    .infoDiv > p{
+        display: none;
+    }
+
+    h4 {
+        font-size: 1em;
+        text-align: center;
+        padding: 10px 20px;
+        width: fit-content;
+        margin: auto;
+        transition: all .3s;
+    }
+
+    main {
+        padding: 25px;
+    }
+
+    .titleGroupDiv > p {
+        font-size: 1.5em;
+    }
+
+    img {
+        width: 20vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    img {
+        width: 100px;
+        margin-right: 8px;
+    }
+
+    .titleGroupDiv > p {
+        font-size: 20px;
+    }
 }
