@@ -1,4 +1,4 @@
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     let vetAges = [10, 21, 31, 40];
     let userNum = prompt("Informe um número qualquer:", 21);
     document.write(`<p>Soma das idades = ${sumAges(vetAges)}</p>`);
@@ -13,18 +13,18 @@ window.addEventListener("load", function() {
 
 sumAges = vet => {
     let sum = 0;
-    for (i=0; i<vet.length; i++) sum+=vet[i];
-    
-    return sum;
-    }
+    for (i = 0; i < vet.length; i++) sum += vet[i];
 
-avgAges = (sum, vet) => sum/vet.length;
+    return sum;
+}
+
+avgAges = (sum, vet) => sum / vet.length;
 
 maxAge = vet => {
     let maxAge = vet[0];
-    for(var i = 0; i<vet.length; i++){
-        if(vet[i]>maxAge){
-            maxAge = vet[i];
+    for (const elemento of vet) {
+        if (elemento > maxAge) {
+            maxAge = elemento;
         }
     }
 
@@ -33,30 +33,30 @@ maxAge = vet => {
 
 oddAge = vet => {
     let vetOdd = [];
-    for(var i = 0; i<vet.length; i++){
-        if(vet[i] % 2 != 0){
-            vetOdd.push(vet[i]);
+    for (const elemento of vet) {
+        if (elemento % 2 != 0) {
+            vetOdd.push(elemento);
         }
     }
-    
+
     return vetOdd;
 }
 
 
 legalAge = vet => {
     let verification = true;
-    for(var i = 0; i<vet.length; i++){
-        if(vet[i] <= 18) verification = false;
+    for (const elemento of vet) {
+        if (elemento <= 18) verification = false;
     }
-    
+
     return verification;
 }
 
 
 userNumber = (vet, userNum) => {
     let verification = true;
-    for(var i = 0; i<vet.length; i++){
-        if(vet[i] < userNum) verification = false;
+    for (const elemento of vet) {
+        if (elemento < userNum) verification = false;
     }
 
     return verification ? "Todas as idades são maiores ou iguais ao valor informado pelo usuário" : "Pelo menos uma das idades é menor que o valor informado pelo usuário"
@@ -64,8 +64,8 @@ userNumber = (vet, userNum) => {
 
 displayAges = (vet, userNum) => {
     let vetMaxAge = [];
-    for(var i = 0; i<vet.length; i++){
-        if(vet[i] >= userNum) vetMaxAge.push(vet[i]);
+    for (const elemento of vet) {
+        if (elemento >= userNum) vetMaxAge.push(elemento);
     }
 
     return vetMaxAge;
@@ -74,11 +74,11 @@ displayAges = (vet, userNum) => {
 
 avgMaxAge = maxAges => {
     let sum = 0;
-    for(var i = 0; i<maxAges.length; i++){
-        sum+=maxAges[i];
+    for (const elemento of maxAges) {
+        sum += elemento;
     }
 
-    let avg = sum/maxAges.length;
+    let avg = sum / maxAges.length;
     avg = avg.toFixed(2);
 
     return avg;
