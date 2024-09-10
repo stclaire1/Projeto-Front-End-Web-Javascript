@@ -1,6 +1,6 @@
 window.addEventListener("load", function() {
-    var vetAges = [10, 21, 31, 40];
-    var userNum = prompt("Informe um número qualquer:", 21);
+    let vetAges = [10, 21, 31, 40];
+    let userNum = prompt("Informe um número qualquer:", 21);
     document.write(`<p>Soma das idades = ${sumAges(vetAges)}</p>`);
     document.write(`<p>Média das idades = ${avgAges(sumAges(vetAges), vetAges)}</p>`);
     document.write(`<p>Maior idade = ${maxAge(vetAges)}</p>`);
@@ -12,7 +12,7 @@ window.addEventListener("load", function() {
 });
 
 sumAges = vet => {
-    var sum = 0;
+    let sum = 0;
     for (i=0; i<vet.length; i++) sum+=vet[i];
     
     return sum;
@@ -21,7 +21,7 @@ sumAges = vet => {
 avgAges = (sum, vet) => sum/vet.length;
 
 maxAge = vet => {
-    var maxAge = vet[0];
+    let maxAge = vet[0];
     for(var i = 0; i<vet.length; i++){
         if(vet[i]>maxAge){
             maxAge = vet[i];
@@ -32,7 +32,7 @@ maxAge = vet => {
 }
 
 oddAge = vet => {
-    var vetOdd = [];
+    let vetOdd = [];
     for(var i = 0; i<vet.length; i++){
         if(vet[i] % 2 != 0){
             vetOdd.push(vet[i]);
@@ -44,7 +44,7 @@ oddAge = vet => {
 
 
 legalAge = vet => {
-    var verification = true;
+    let verification = true;
     for(var i = 0; i<vet.length; i++){
         if(vet[i] <= 18) verification = false;
     }
@@ -54,7 +54,7 @@ legalAge = vet => {
 
 
 userNumber = (vet, userNum) => {
-    var verification = true;
+    let verification = true;
     for(var i = 0; i<vet.length; i++){
         if(vet[i] < userNum) verification = false;
     }
@@ -63,7 +63,7 @@ userNumber = (vet, userNum) => {
 }
 
 displayAges = (vet, userNum) => {
-    var vetMaxAge = [];
+    let vetMaxAge = [];
     for(var i = 0; i<vet.length; i++){
         if(vet[i] >= userNum) vetMaxAge.push(vet[i]);
     }
@@ -73,12 +73,12 @@ displayAges = (vet, userNum) => {
 
 
 avgMaxAge = maxAges => {
-    var sum = 0;
+    let sum = 0;
     for(var i = 0; i<maxAges.length; i++){
         sum+=maxAges[i];
     }
 
-    var avg = sum/maxAges.length;
+    let avg = sum/maxAges.length;
     avg = avg.toFixed(2);
 
     return avg;
